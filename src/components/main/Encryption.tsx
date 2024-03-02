@@ -1,9 +1,9 @@
 "use client";
+import { motion } from "framer-motion";
+import Image from "next/image";
 import React from "react";
 
-import { motion } from "framer-motion";
 import { slideInFromTop } from "@/utils/motion";
-import Image from "next/image";
 
 const Encryption = () => {
   return (
@@ -31,13 +31,7 @@ const Encryption = () => {
             height={50}
             className="w-[50px] translate-y-5 transition-all duration-200 group-hover:translate-y-11"
           />
-          <Image
-            src="/LockMain.png"
-            alt="Lock Main"
-            width={70}
-            height={70}
-            className=" z-10"
-          />
+          <Image src="/LockMain.png" alt="Lock Main" width={70} height={70} className=" z-10" />
         </div>
 
         <div className="Welcome-box px-[15px] py-[4px] z-[20] brder my-[20px] border-[#7042f88b] opacity-[0.9]">
