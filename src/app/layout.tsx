@@ -10,8 +10,12 @@ import StarsCanvas from "@/components/main/StarBackground";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Space Portfolio",
+  title: "Jayden Dev Portfolio",
   description: "This is my portfolio",
+  icons: [
+    { rel: "icon", url: "/logo.svg" },
+    { rel: "apple", url: "/logo.svg" },
+  ],
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
