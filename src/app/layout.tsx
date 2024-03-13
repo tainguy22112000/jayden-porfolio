@@ -18,7 +18,11 @@ export const metadata: Metadata = {
   ],
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+type TRootLayoutProps = {
+  readonly children: React.ReactNode;
+};
+
+export default function RootLayout({ children }: TRootLayoutProps) {
   return (
     <html lang="en">
       <body className={`${inter.className} bg-[#030014] overflow-y-scroll overflow-x-hidden`}>

@@ -3,7 +3,6 @@
 import { SparklesIcon } from "@heroicons/react/24/solid";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import React from "react";
 
 import { Socials } from "@/constants";
 import { slideInFromLeft, slideInFromRight, slideInFromTop } from "@/utils/motion";
@@ -13,12 +12,12 @@ const HeroContent = () => {
     <motion.div
       initial="hidden"
       animate="visible"
-      className="flex flex-row items-center justify-center px-20 mt-40 w-full z-[20]"
+      className="flex flex-col sm:flex-row items-center justify-center sm:justify-between px-6 sm:px-20 mt-40 w-full z-[20] min-h-[800px]"
     >
-      <div className="flex flex-col justify-center h-full gap-5 m-auto text-start">
+      <div className="flex flex-col justify-center h-full gap-5 mb-10 sm:mb-0 items-center text-center sm:text-start">
         <motion.div
           variants={slideInFromLeft(0.5)}
-          className="flex flex-col gap-6 mt-6 text-6xl font-bold text-white max-w-[300px] w-auto h-auto"
+          className="flex flex-col mt-16 text-6xl font-bold text-white max-w-[300px] w-auto h-auto"
         >
           <span className="text-4xl">
             Hi, I am <br />
@@ -42,10 +41,16 @@ const HeroContent = () => {
         variants={slideInFromRight(0.8)}
         className="flex items-center justify-center w-full h-full"
       >
-        <Image src="/mainIconsdark.svg" alt="work icons" height={650} width={650} />
+        <Image
+          src="/mainIconsdark.svg"
+          alt="work icons"
+          height={620}
+          width={620}
+          className="absolute hidden sm:block top-1/2 translate-y-[-50%] left-1/2 translate-x-[-50%]"
+        />
       </motion.div>
 
-      <div className="flex flex-col justify-center gap-5">
+      <div className="flex flex-col justify-center gap-5 max-w-[400px]">
         <motion.span variants={slideInFromRight(0.8)} className="text-2xl text-white">
           Software Engineer based on Ho Chi Minh city, Vietnam
         </motion.span>
@@ -58,7 +63,7 @@ const HeroContent = () => {
           <h1 className="Welcome-text text-[13px]">Fullstack Developer</h1>
         </motion.div>
 
-        <motion.p variants={slideInFromLeft(0.8)} className="text-md text-gray-400 max-w-[600px]">
+        <motion.p variants={slideInFromLeft(0.8)} className="text-md text-gray-400">
           I&apos;m a multi-disciplinary Full Stack Software Engineer with experience creating
           projects in Website, Mobile, Software development, and have worked with diverse clients
           from all over the world. Check out my projects and skills.
